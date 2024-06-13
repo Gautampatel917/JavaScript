@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>closure</title>
+</head>
+
+<body>
+    <button class="orange">orange</button>
+    <button class="yellow">yellow</button>
+</body>
+<script>
+
+    //-----------------------------------lexical scooping : child function have parent function property access but parent don't have child function property access
+
+    /*    function outer(){
+            username = 'gautam'
+            function inner(){
+                console.log(username)          
+                let secret = 'some code'
+            }
+            function innerTwo(){
+                console.log(username)
+                console.log(secret);
+            }
+            inner()
+            innerTwo()
+        }
+        outer() */
+
+    //----------------------------------------------------closure
+    function makeFun() {
+        let name = 'gautam'
+        function sayName() {
+            console.log(name);
+        }
+        return sayName;
+    }
+
+    const user = makeFun();
+    user();
+
+    //closure return function with there lexical scope
+
+    //---------------------------------------------------realWorld example
+
+    const orange = document.querySelector('.orange');
+    const yellow = document.querySelector('.yellow');
+    /* 
+        orange.addEventListener('click', function () {
+            document.body.style.backgroundColor = 'orange'
+        })
+    
+        yellow.addEventListener('click', function () {
+            document.body.style.backgroundColor = 'yellow'
+        }) */
+
+    //instance of above we can create clickHandler function
+
+    function clickHandler(color) {
+        // document.body.style.backgroundColor = `${color}`         --> it's execute direct without click event
+
+        return function () {
+            document.body.style.backgroundColor = `${color}`
+        }
+    }
+
+    orange.onclick = clickHandler('orange');
+    yellow.onclick = clickHandler('yellow');
+
+</script>
+
+</html>
