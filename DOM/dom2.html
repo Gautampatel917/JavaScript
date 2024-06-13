@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | remove elements</title>
+</head>
+
+<body style="background-color: rgb(20,20,20); color: white;">
+        <ul class="language">
+        </ul>
+</body>
+
+<script>
+    function addLanguage(langName) {
+        const li = document.createElement('li')
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage('JavaScript');
+    addLanguage('Python');
+    addLanguage('C#');
+
+    function addOptiLanguage(langName) {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').append(li)
+    }
+    
+    addOptiLanguage('c++');
+
+    //== Edit =====================================================
+    const secondLang = document.querySelector('li:nth-child(2)');
+    // secondLang.innerHTML = 'mojo'
+    // secondLang.textContent = 'mojo'  ==> same work like innerHTML
+
+    const newLi = document.createElement('li')
+    newLi.textContent = 'mojo'
+    secondLang.replaceWith(newLi)
+/* 
+    const firstLang = document.querySelector('li:first-child');
+    firstLang.outerHTML = '<li>typescript<li>' */
+
+    //== remove ==============================================
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+</script>   
+
+</html>
