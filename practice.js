@@ -1,7 +1,12 @@
-const promiseTwo = new Promise(function (resolve, reject) {
-    setTimeout(function () {
-        resolve('promise two resolved');
-    }, 1000)
-}).then(function () {
-    console.log('promise two resolved1');
-})
+function changeColor() {
+    const number = "0123456789ABCDEF";
+    let color = "#";
+    for (let i = 0; i < 6; i++) {
+        color += number[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
+myColor = changeColor();
+
+console.log(myColor);
