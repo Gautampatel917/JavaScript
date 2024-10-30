@@ -19,6 +19,7 @@ const values = coding.forEach( (items) => {
 console.log(values); */
 
 //--------------------------------------Filtering Arrays
+//filter & also create a new array and store value in that array
 
 const myNumber = [1, 2, 3, 4, 5, 6, 7];
 

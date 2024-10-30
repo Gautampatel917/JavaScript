@@ -1,12 +1,15 @@
-function changeColor() {
-    const number = "0123456789ABCDEF";
+function randomColor() {
+    let colorCode = "0123456789ABCDEF";
     let color = "#";
     for (let i = 0; i < 6; i++) {
-        color += number[Math.floor(Math.random() * 16)];
+        color += colorCode[Math.floor(Math.random() * 16)];
     }
     return color;
 }
 
-myColor = changeColor();
+colorChanger = () => {
+    const finalColor = randomColor();
+    console.log(finalColor);
+}
 
-console.log(myColor);
+setInterval(colorChanger, 1000)
