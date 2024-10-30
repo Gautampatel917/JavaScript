@@ -24,7 +24,7 @@ console.log(Math);
 console.log(Math.PI);
 console.log(Math.abs(-3));
 console.log(Math.round(3.5));
-console.log(Math.floor(4.8)); // same work like round
+console.log(Math.floor(4.8) + " This is floor function"); // same work like round but there include value after (.) dot.
 console.log(Math.sqrt(2));
 console.log(Math.pow(3));
 console.log(Math.min(34, 534, 53, 3));

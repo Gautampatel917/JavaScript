@@ -1,17 +1,18 @@
- //singleton    - when we declare object like literals that not create singleton
+//singleton    - when we declare object like literals that not create singleton
 
+//literals : object value that you literally write in your program/app.
 // Object literals
 // Object.create
 
 const mysym = Symbol("key1");
 
 const JsUser = {
-    name : "Gautam",
-    age : 18,
+    name: "Gautam",
+    age: 18,
     profession: "Software Developer",
-    "fullName" : "Gautam malaviya",      //=> we can not access this value by dot operator
+    "fullName": "Gautam malaviya",      //=> we can not access this value by dot operator
     // mysym : "mySymbol"  not use as symbol
-    [mysym] : "Gautam"
+    [mysym]: "Gautam"
 }
 
 console.log(JsUser.name);
@@ -21,11 +22,11 @@ console.log(typeof JsUser[mysym]);  //=> When we refer symbol
 
 // Object.freeze(JsUser);
 
-JsUser.greeting = function(){
+JsUser.greeting = function () {
     console.log("Hello greeting");
 }
 
-JsUser.greetingTwo = function(){
+JsUser.greetingTwo = function () {
     console.log(`Hello user ${this.name}`);
 }
 
