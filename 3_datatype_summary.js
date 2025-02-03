@@ -16,7 +16,9 @@ const boolTrue = true;
 const Id = Symbol("123");
 const anotherId = Symbol("123");
 
-console.log(Id === anotherId);
+console.log(Id);
+console.log(anotherId);
+console.log(Id === anotherId);  // false : symbol is unique and use for as key for object
 
 const bigNumber = 293959857907390n;
 console.log(typeof (bigNumber));
@@ -31,14 +33,14 @@ Array, Object, Function
 const arr = ["Shaktiman", "naagraj", "doga"];
 
 const obj = {
-    name : "Gautam",
-    age : 19,
+    name: "Gautam",
+    age: 19,
     profession: "IT"
 }
 
 console.table(obj);
 
-const Fname = function(){
+const Fname = function () {
     console.log("i am function");
 }
 

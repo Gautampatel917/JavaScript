@@ -5,6 +5,7 @@
 // Object.create
 
 const mysym = Symbol("key1");
+console.log(mysym);
 
 const JsUser = {
     name: "Gautam",

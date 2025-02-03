@@ -8,7 +8,12 @@ console.log(`Hello my name is ${name} and my repository in github is ${repoCount
 
 const gameName = new String('Gautam');
 
-console.log(gameName.__proto__);
+String.prototype.reverse = function () {
+    return this.split('').reverse().join('');
+}
+
+console.log(gameName.__proto__); // it's show the prototype of string. and also we can add custom method in string 
+console.log(gameName.reverse());// it's show the reverse of string.
 console.log(gameName.length);
 console.log(gameName.toUpperCase());
 console.log(gameName.charAt(2)); // a character
@@ -18,14 +23,14 @@ const newString = gameName.substring(0, 4); // start and end number there store 
 console.log(newString);
 
 const anotherString = gameName.slice(-2, 2);    //same work line substring.
-console.log(anotherString);
+console.log('slice: ' + anotherString);
 
 const otherString = " Gautam ";
 console.log(otherString);
 console.log(otherString.trim()); //trim are use for remove white space in string  it's use in form.
 
 const url = "https://hitesh.com/hitesh%20choudhary";
-console.log(url.replace('%20','-'));
+console.log(url.replace('%20', '-'));
 
 console.log(url.includes("gautam"));    //check it's available or not   
 

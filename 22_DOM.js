@@ -1,4 +1,3 @@
-
 document.getElementById("heading")
     < h1 class=​"heading" id = "heading" > DOM Learning on Chai or Code​</h1 >
 

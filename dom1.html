@@ -16,34 +16,34 @@
     </div>
 </body>
 
-    <script>
+<script>
 
-        const values = document.querySelector(".parent");
-        console.log(values);
-        console.log(values.children)
+    const values = document.querySelector(".parent");
+    console.log(values);
+    console.log(values.children)
 
-        for (let i = 0; i < values.children.length; i++) {
-            console.log(values.children[i].innerHTML)
-        }
-        const dayOne = document.querySelector('.day')
-        console.log(dayOne) 
+    for (let i = 0; i < values.children.length; i++) {
+        console.log('InnerHtml ' + values.children[i].innerHTML)
+    }
+    const dayOne = document.querySelector('.day')
+    console.log(dayOne)
 
-        console.log(dayOne.parentElement)
-        console.log(dayOne.nextElementSibling)
-        console.log("Node: ",values.childNodes)
+    console.log(dayOne.parentElement)
+    console.log(dayOne.nextElementSibling)
+    console.log("Node: ", values.childNodes)
 
-        //Create and add values and property.--------------------------------
-        const div = document.createElement('div')
-        console.log(div)
-        div.className = 'heroSection'
-        div.id = Math.round(Math.random() * 10 + 1)
-        div.setAttribute('title', 'setTitle')
-        // div.innerText = "successfully set"
-        let addText = document.createTextNode("creating text node for not overwrite")
-        div.appendChild(addText)
+    //Create and add values and property.--------------------------------
+    const div = document.createElement('div')
+    console.log(div)
+    div.className = 'heroSection'
+    div.id = Math.round(Math.random() * 10 + 1)
+    div.setAttribute('title', 'setTitle')
+    // div.innerText = "successfully set"
+    let addText = document.createTextNode("creating text node for not overwrite")
+    div.appendChild(addText)
 
-        //add in document
-        document.body.appendChild(div)
-    </script>
+    //add in document
+    document.body.appendChild(div)
+</script>
 
 </html>

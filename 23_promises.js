@@ -19,7 +19,7 @@ new Promise(function (resolve, reject) {
     }, 1000);
 }).then(function () {
     console.log('Async resolved')
-})
+}) 
 
 //---------------------------------------pass the value in then()
 

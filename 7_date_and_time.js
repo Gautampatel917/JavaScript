@@ -9,7 +9,7 @@ console.log(myDate.toLocaleString('default', {       // we make custom format
     weekday: 'long',
     year: 'numeric',
     month: 'long',
-}));
+}) + " set custom format");
 
 console.log(myDate.toDateString());
 console.log(myDate.getFullYear());

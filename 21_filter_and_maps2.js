@@ -3,8 +3,8 @@ const myNumber = [1, 2, 3, 4, 5, 6, 7, 8];
 // const newNums=myNumber.map((num) => num += 10)
 
 const newNums = myNumber.map((num) => num * 10)         //multiply and add 10 plus it's call chaining
-.map((num) => num += 10)
-.filter((num) => num >= 40);
+    .map((num) => num += 10)
+    .filter((num) => num >= 40);
 
 console.log(newNums);
 
@@ -18,8 +18,8 @@ const myNums = [1, 2, 3]
 },0)
 */
 
-const myTotal = myNums.reduce ((acc,currVal) => acc += currVal, 0)
-console.log(myTotal);
+const myTotal = myNums.reduce((acc, currVal) => acc += currVal, 0)
+console.log(myTotal); // output: 6
 
 // IN real life this method are use count the bill
 const shoppingCart = [
@@ -41,5 +41,5 @@ const shoppingCart = [
     }
 ]
 
-const priceToPay = shoppingCart.reduce((acc,item) => acc + item.price , 0)
-console.log(priceToPay);
+const priceToPay = shoppingCart.reduce((acc, item) => acc + item.price, 0)
+console.log(priceToPay); // output: 20996

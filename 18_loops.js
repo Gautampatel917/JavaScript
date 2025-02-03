@@ -10,7 +10,7 @@ for (let i = 0; i < fruits.length; i++) {
 //use const for creating array
 const color = ["white", "Black", "Blue"];
 // color = ["Green", "Orange"]     //error no changeable
-color.push("Green"); //But we use array method
+color.push("Green"); //But we use array method for add the value in array 
 console.log(color);
 
 //when use reference variable use const is good practice...

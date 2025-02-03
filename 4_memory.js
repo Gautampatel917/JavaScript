@@ -29,7 +29,7 @@ userTwo.email = "gautam@gmail.com" // -> their also change value of userOne beca
 console.table(userOne);
 console.table(userTwo);
 
-let array = ["Gautam", "malaviya", "vishva", "shahad", "krishana"];
+let array = ["Gautam", "malaviya", "vishva", "sharad", "krishana"];
 
 let array1 = array;
 

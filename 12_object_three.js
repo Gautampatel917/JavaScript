@@ -1,16 +1,16 @@
 const course = {
-    courseName : "javaScript",
-    price : '999',
-    courseInstructor : "Hitesh"
+    courseName: "javaScript",
+    price: '999',
+    courseInstructor: "Hitesh"
 }
 
 //destructuring syntax -------------------------------------------------------
 
-let {courseInstructor} = course;
-console.log(courseInstructor);
+let { courseInstructor } = course;
+console.log(courseInstructor); //output : Hitesh
 
-const {courseInstructor : instructor} = course
-console.log(instructor);
+const { courseInstructor: instructor } = course // rename the variable name courseInstructor to instructor   
+console.log(instructor); //output : Hitesh
 
 //API ------------------- work like call the api and give all work that api have
 /* 

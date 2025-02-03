@@ -15,13 +15,17 @@ const newHeros = [...marvel_heros, ...dc_heros];    //spread operator[...]
 console.log(newHeros);
 
 const un_managed = [1, 2, 4, [5, 6, 7], 8, 9[3, 2, [3, 2]]];
+console.log(un_managed);
+
 
 const managed_arr = un_managed.flat(Infinity);
 console.log(managed_arr);
 
 console.log(Array.isArray("Gautam"));
 console.log(Array.from("Gautam"));      //convert to the array.
-console.log(Array.from({name: "Gautam"}));      //if their could not make array it's give empty array (interview perspective)
+console.log(Array.from({ name: "Gautam" }));      //if their could not make array it's give empty array (interview perspective)
+//if you want to create an array of object then you can use below code.
+console.log(Array.from({ length: 5 }, (item, index) => index));  //it's create array of object.
 
 let score1 = 100;
 let score2 = 200;
