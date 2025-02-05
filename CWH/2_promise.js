@@ -21,11 +21,12 @@ promise1.then((value) => {
 
 //some extra methods and properties
 
+//promise run bot promise same time, if any one has failed so then entire catch block will run.
 let promise3 = Promise.all([promise1], [promise2])      // all : show the which one is first execute
 promise3.then((a) => console.log(a))
     .catch((error) => console.log(error))
 
-let promise4 = Promise.allSettled([promise1], [promise2])      // allSettled : kuch bhi resulţ aajaye
+let promise4 = Promise.allSettled([promise1], [promise2])      // allSettled : kuch bhi result aajaye
 promise3.then((a) => console.log(a))
     .catch((error) => console.log(error))
 

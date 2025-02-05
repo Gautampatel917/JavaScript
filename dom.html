@@ -13,10 +13,15 @@
 </body>
 
 <script>
-    function addLanguage(languageName) {
+    const ul = document.querySelector('.language')
+    function addLanguage(language) {
         const li = document.createElement('li');
-        li.innerHTML = `${languageName}`;
-        document.querySelector('.language').appendChild(li);
+        li.innerHTML = `${language}`;
+        ul.appendChild(li);
     }
-    addLanguage('JavaScript');
+    addLanguage('javascript')
+    ul.addEventListener('click', (event) => {
+        console.log(event.target.innerHTML + ' removed successfully')
+        event.target.remove()
+    })
 </script>
